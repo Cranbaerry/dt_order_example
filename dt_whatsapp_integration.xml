@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_dt_whatsapp_integration</name>
+    <creationDate>2024-02-12</creationDate>
+    <copyright>2024 dreamztech</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>dreamztech</author>
+    <authorEmail>support@dreamztech.com.my</authorEmail>
+    <authorUrl>https://dreamztech.com.my/</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_DT_WHATSAPP_INTEGRATION_XML_DESCRIPTION</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <schemas>
+            <schemapath type="mysql">sql/updates</schemapath>
+        </schemas>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>dt_whatsapp_integration.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_dt_whatsapp_integration" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/en-GB.com_dt_whatsapp_integration.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_DT_WHATSAPP_INTEGRATION</menu>
+        <submenu>
+            
+			<menu link="option=com_dt_whatsapp_integration&amp;view=whatsappintegrationphonenumbers" view="whatsappintegrationphonenumbers" alt="Dt_whatsapp_integration/Whatsappintegrationphonenumbers">COM_DT_WHATSAPP_INTEGRATION_TITLE_WHATSAPPINTEGRATIONPHONENUMBERS</menu>
+
+			<menu link="option=com_dt_whatsapp_integration&amp;view=whatsappintegrationblastmessages" view="whatsappintegrationblastmessages" alt="Dt_whatsapp_integration/Whatsappintegrationblastmessages">COM_DT_WHATSAPP_INTEGRATION_TITLE_WHATSAPPINTEGRATIONBLASTMESSAGES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>dt_whatsapp_integration.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/en-GB.com_dt_whatsapp_integration.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_dt_whatsapp_integration.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="dt_whatsapp_integration"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

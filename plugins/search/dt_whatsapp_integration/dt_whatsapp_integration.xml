@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_dt_whatsapp_integration</name>
+    <author>dreamztech</author>
+    <creationDate>2024-02-12</creationDate>
+    <copyright>2024 dreamztech</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@dreamztech.com.my</authorEmail>
+    <authorUrl>https://dreamztech.com.my/</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>PLG_SEARCH_COM_DT_WHATSAPP_INTEGRATION_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="dt_whatsapp_integration">dt_whatsapp_integration.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="languages">
+        
+			<language tag="en-GB">en-GB/en-GB.plg_search_dt_whatsapp_integration.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_search_dt_whatsapp_integration.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_DT_WHATSAPP_INTEGRATION_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_DT_WHATSAPP_INTEGRATION_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>
